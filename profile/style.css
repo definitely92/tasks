@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Roboto&display=swap');
+    * {padding: 0; margin: 0;}
+    body {background: #fff;}
+    ul, li {list-style: none;}
+    a {text-decoration: none;}
+    h1 {padding: 0; margin: 0;}
+    header {display: flex; justify-content: center; align-items: center; height: 100px; text-align: center; background: #fff; position: sticky; top: 0; z-index: 99;}
+    header h1 a {display: inline-block;  font-size: 30px; color: #000; font-family: 'Bodoni Moda', serif; letter-spacing: -1px;}
+    header .btn_menu {display: inline-block; position: absolute; left: 100px; color: #000;}
+
+    main {padding: 0 100px;}
+    main * {font-family: 'Roboto', sans-serif;}
+    dl dt, dl dd {display: inline-block; margin: 0;}
+    section {margin-top: 100px; text-align: center;}
+    section h2 {color: #000;}
+    .text {font-size: 14px; line-height: 1.5;}
+    footer {display: flex; justify-content: space-between; margin-top:100px; border-top: 1px solid #ddd; padding: 40px; text-align: center; background: #fff; color: #444;}
+    footer .sns {width: 15%; display: grid; grid-template-columns: repeat(4,1fr);}
+    footer .sns a {display: inline-block; color: #000;}
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .aniFadeIn1 {
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+    .aniFadeIn2 {
+        animation-name: fadeIn;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+    #section1 {position: relative; overflow: hidden; text-align: left;}
+    #section1 .text {background: none; position: absolute; left: 0; top:50%; transform: translateY(-50%); z-index: 11;}
+    #section1 .text .big_txt { font-size: 70px; line-height: 1;}
+    #section1 .text .small_txt {margin-top: 40px; font-size: 12px;}
+    #section1 .img {float: right;}
+    #section1 .img img { width: 700px; height: auto; }
+
+    #section2 {overflow: hidden; text-align: left;}
+    #section2 .img-area {float: left; width: 40%;}
+    #section2 .img-area img {width: 100%;}
+    #section2 .profile {display: flex; height: 100vh; align-items:center; float: right; width: 48%;  position: relative;}
+    #section2 .profile .inner {width: 70%;}
+    #section2 .profile h3 {position: absolute; left:-45%; top:9%; font-family: 'Anton', sans-serif; font-size: 50px; color: #000;}
+    #section2 .profile .greeting {font-size:25px; margin: 45px 0;}
+    #section2 .profile .text {font-size: 13px; margin-bottom: 20px;}
+    .side_sns {display:flex; gap: 20px; justify-content: flex-end; align-items: center; flex-direction: column; position: fixed; top:50%; right: 3%; z-index: 99;}
+    .side_sns a {display: inline-block; color: #000;}
+
+    #section3 article {display: table;}
+    #section3 article .img {display: table-cell; width:40%;}
+    #section3 article .img img {width:100%;}
+    #section3 article .cnt {display: table-cell; width:55%; vertical-align: middle; text-align: center;}
+    #section3 article .cnt .stacks_container {display: inline-block; text-align: left;}
+    #section3 article .cnt .stacks_container .title {font-size: 30px; color: #000;}
+    #section3 article .cnt .stacks_container .sub_title {display: inline-block; margin-top: 50px; padding: 5px 10px; background: #000; border-radius: 10px; color: #fff;}
+    #section3 article .cnt .stacks_container .stack_container {margin-top: 20px; display: flex; justify-content: flex-start; align-items: center; padding: 0 30px;}
+    #section3 article .cnt .stacks_container .stack_container ul {display: flex; justify-content: flex-start; align-items: center; gap: 35px;}
+    #section3 article .cnt .stacks_container .stack_container ul li .img {display: flex; position: relative; align-items: center; justify-content: center; width: 90px; height: 90px; background: #000; border: 1px solid rgb(30,30,35); box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); overflow: hidden;}
+    #section3 article .cnt .stacks_container .stack_container ul li img {width: 50px;}
+    #section3 article .cnt .stacks_container .stack_container ul li p {margin-top: 10px; text-align: center;}
+    #section3 article .cnt .stacks_container ul li {display: flex; justify-content: center; align-items: center; flex-direction: column;}
+    
+    @media screen and (max-width:1024px) {
+        header .btn_menu {left: 40px;}
+        main {padding: 0 60px;}
+        footer {}
+
+        #section1 {margin-top: 50px; text-align: center;}
+        #section1 .text {width:80%; display: block; left: 50%; top: 46%; transform: translate(-50%,-50%); color: #fff;}
+        #section1 .img {float: none;}
+
+        #section2 .img-area {width: 40%;}
+        #section2 .profile {width:50%; height: 70vh;}
+        #section2 .profile h3 {margin: 10px 0;}
+        #section2 .profile .greeting {font-size: 22px;}
+        #section2 .profile h3 {font-size: 30px; top: 2%;}
+        .side_sns {right: 2%;}
+
+        #section3 article .cnt .stacks_container .stack_container ul li .img {width: 50px; height: 50px;}
+        #section3 article .cnt .stacks_container .stack_container ul li img {width: 24px;}
+    }
+
+    @media screen and (max-width:768px) {
+        main {padding: 0;}
+        section {margin-top: 0;}
+        #section1 {margin-top: 0;}
+        #section1 .img img {width: 100%; height: 100%;}
+        #section2 {position: relative;}
+        #section2 .profile .sns a {color: #fff;}
+        #section2 .img-area {float: none; width: 100%;}
+        #section2 .profile {display: inline-block; width: auto; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+        #section2 .profile .inner {width: 80%;}
+        #section2 .profile h3 {position: relative; left: unset; top: unset; color: #fff;}
+        #section2 .profile .greeting {color: #fff;}
+        #section2 .profile .text {color: #fff;}
+        .side_sns a {color: #fff;}
+
+        #section3 article {display: block; position: relative;}
+        #section3 article .cnt {width:auto; display: block; text-align: center; position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%); z-index: 1;}
+        #section3 article .img {display: block; width: 100%; }
+        #section3 article .cnt .stacks_container .title {color: #fff;}
+        #section3 article .cnt .stacks_container .sub_title {background: #fff; color: #000;}
+        #section3 article .cnt .stacks_container .stack_container ul li .img {background: #fff;}
+        #section3 article .cnt .stacks_container .stack_container ul li p {color: #fff;}
+        footer {margin-top: 0; padding: 30px; border: none;}
+    }
+
+    @media screen and (max-width:640px) {
+        header {height: 50px;}
+        header h1 a {font-size: 15px; vertical-align: middle;}
+        #section1 .text .big_txt {font-size: 35px;}
+        #section1 .text .small_txt {margin-top: 20px;}
+
+        #section2 .profile h3 {font-size: 15px;}
+        #section2 .profile .greeting {margin: 20px 0; font-size: 13px;}
+        #section2 .profile .text {font-size: 11px;}
+
+        #section3 article .cnt .stacks_container .sub_title {margin-top: 30px; padding: 2px 5px; font-size: 12px; border-radius: 5px;;}
+        #section3 article .cnt .stacks_container .stack_container ul li .img {width: 30px; height: 30px;}
+        #section3 article .cnt .stacks_container .stack_container ul li img {width: 16px;}
+        #section3 article .cnt .stacks_container .stack_container ul li p {font-size: 11px;}
+        footer {padding: 20px;}
+        footer small {font-size: 12px;}
+    }
