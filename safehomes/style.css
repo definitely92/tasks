@@ -1,5 +1,9 @@
-
+* {
+    margin: 0;
+    padding: 0;
+}
 p {margin: 0; padding: 0;}
+strong {font-weight: bold;}
 body {margin: 0; padding: 0;}
 ul,ol {padding: 0; margin: 0;;}
 a {text-decoration: none;}
@@ -48,7 +52,7 @@ article:first-child {margin-top: 120px;}
 .img-cnt.img-l .cnt {margin-left: 131px;}
 .img-cnt.img-r .cnt {margin-right: 131px;}
 .price-cnt {margin-top: 50px; text-align: center; width: 1080px; margin-left: -54px;}
-.price-cnt ul {overflow: hidden;}
+.price-cnt ul {display: inline-block; overflow: hidden;}
 .price-cnt li {float: left; width: 340px; background: #F2F3F4; border-radius: 20px; height: 401px; margin-left: 20px;}
 .price-cnt li .inner {padding: 30px 24px;}
 .price-cnt li .inner .tit {margin-bottom: 24px; font-size: 24px; color: #333D4B;}
@@ -57,15 +61,19 @@ article:first-child {margin-top: 120px;}
 .price-cnt li .inner .period { margin-bottom: 20px; font-size: 16px; color: #6B7684;}
 .price-cnt li .inner .btn {display: block; border-radius: 10px; text-align: center; line-height: 64px; background: #0E7159; font-weight: bold; font-size: 16px; color: #fff;}
 .price-cnt li:first-child {margin-left: 0;}
-.reviews {width: 1100px; margin: 80px auto 0; text-align: center;}
-.reviews ul {overflow: hidden; width: 1920px; margin: 0 -410px;}
-.reviews ul li {float: left; margin-left: 20px; text-align: left; width: 536px; height: 240px; padding: 45px; background: #F2F3F4; border-radius: 16px;}  
+
+.reviews {width: 680px; margin: 80px auto 0; text-align: center;}
+.reviews ul {display: flex; left:-32px; flex-wrap: nowrap; position: relative; user-select: none;}
+.reviews ul li {width: 100%; margin :0px 15px; display: flex; align-items: center; justify-content: center; text-align: left; flex-shrink: 0; background: #F2F3F4; border-radius: 16px; position: relative; left: 0; flex-shrink: 0; transition: all .5s; cursor: pointer;}
+.reviews ul li:first-child {margin-left: 0;}
+.reviews ul li .inner { padding: 45px;}
 .reviews ul li:first-child {margin-left: 0;}
 .reviews ul li .profile {padding-left: 64px; position: relative;} 
 .reviews ul li .profile img {position: absolute; left: 0; width: 48px; height: 48px; border-radius: 100%;}
-.reviews ul li .profile .info .name {font-weight: bold; font-size: 18px; color: 333D4B;}
+.reviews ul li .profile .info .name {font-weight: bold; font-size: 18px; color: #333D4B;}
 .reviews ul li .profile .info .txt {font-size: 18px; color: 333D4B;}
 .reviews ul li .review {margin-top: 30px; line-height: 32px; font-size: 18px; color: #6B7684;}
+
 .bg-full {width: 100%; margin: 150px auto 0; background: #0E7159; text-align: center;}
 .bg-full .inner {width: 1100px; padding: 160px 0; text-align: center; margin: 0 auto;}
 .bg-full .inner .text {margin-bottom: 75px; text-align: center; font-weight: bold; font-size: 60px; color: #fff;}
@@ -74,3 +82,113 @@ footer {height: 159px;}
 footer .inner {width: 1100px; margin: 0 auto; padding:25px 0;}
 footer .inner p {margin-bottom: 15px; font-size: 16px; font-weight: bold; color: #333D4B;}
 footer .inner small {line-height: 24px; font-size: 14px; color: #6B7684;}
+
+@media (max-width:1024px) {
+    header .inner {width: 730px;}
+
+    .visual {width: 730px; }
+    .visual .inner {width: 1024px; margin: 0 -147px;}
+    .visual .inner .text {font-size: 48px;}
+    .visual .cnts a {display: none;}
+
+    .title {font-size: 32px;}
+    
+    article {width: 730px; margin: 100px auto; text-align: center;}
+    .services-area {display: inline-block; width:634px; margin-top: 40px;}
+    .services-area .service {margin: 0 48px 48px 0;}
+    .services-area .service:nth-child(2) {margin-right: 0;}
+    .services-area .btn-arr {display: none;}
+
+    .check-lst .check {display:inline-block; width:634px;}
+    .check-lst .check li:nth-child(2n) {margin-right: 0;}
+
+    .img-cnt {padding-top:320px; margin-bottom: 140px; text-align: center; position: relative;}
+    .img-cnt .img {display:inline-block; float: none;}
+    .img-cnt.img-l .cnt {margin-left: 0;}
+    .img-cnt.img-r .cnt {margin-right: 0;}
+    .img-cnt .cnt {display: inline-block; float: none; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+
+    .img-cnt .cnt .ex-img {display: none;}
+    .price-cnt {width: 100%; margin-left: 0;}
+    .price-cnt ul {display:inline-block; width:712px;}
+    .price-cnt ul li {margin: 0 20px 20px 0;}
+    .price-cnt ul li:nth-child(2) {margin-right: 0;}
+
+    .reviews { margin-top: 40px;}
+    .bg-full .inner {width: 740px;}
+    footer .inner {width: 740px;}
+}
+
+@media (max-width:768px) {
+    header .inner {width: 92.7%;}
+
+    .visual {width: 100%;}
+    .visual .inner {width: 100%; margin: 0;}
+    .visual .inner .text {font-size: 36px;}
+    .visual .cnts a {display: none;}
+
+    .title {width:92.7%; font-size: 32px; margin: 0 auto;}
+    article:first-child {margin-top: 80px;}
+    article {width: 100%; margin: 80px auto; text-align: center;}
+    .services-area {display: inline-block; width:82.5%; margin-top: 40px;}
+    .services-area .service {width: 46.214%; margin: 0 7.5% 7.5% 0;}
+    .services-area .service img {width: 100%;}
+    .services-area .service:nth-child(2) {margin-right: 0;}
+    .services-area .btn-arr {display: none;}
+    .img-cnt {margin-bottom: 100px;}
+    .check-lst .check {margin-top: 40px; width: 82.5%;}
+    .check-lst .check li {width: 45.95%; height: auto; margin: 0 6.5% 7.5% 0;}
+    .check-lst .check li:nth-child(2n) {margin-right: 0;}
+    .check-lst .btn-arr {margin-top: 0;}
+    .price-cnt {width: 100%; margin-left: 0;}
+    .price-cnt ul {display:inline-block; width:92.7%;}
+    .price-cnt ul li {width: 47.752%; margin: 0 4.49% 4.49% 0;}
+    .price-cnt ul li:nth-child(2) {margin-right: 0;}
+
+    .reviews {width: 92.7%; margin-top: 40px;}
+    .reviews ul {margin: 0 auto; left: unset; overflow: hidden;}
+    .reviews ul li {width: 100%; height: auto; margin: 0;}
+    .bg-full .inner {width: 92.7%;}
+    .bg-full .inner .text {font-size: 48px;}
+    footer .inner {width: 92.7%;}
+}
+
+@media (max-width:480px) {
+    header .inner {width: 90%;}
+    header .inner .logo {width: 45.3%;}
+    header .inner .logo a {display: block;}
+    header .inner .logo img {width: 100%;}
+    header .inner .util a.btn-bg-white {display: none;}
+    header .inner .util {width: 20.83%;}
+    header .inner .util a {width: 100%;}
+
+    .visual {width: 100%;}
+    .visual .inner {width: 100%; margin: 0;}
+    .visual .inner .text {font-size: 24px;}
+    .visual .cnts a {display: none;}
+
+    .title {width:100%; font-size: 21px; margin: 0 auto;}
+    article:first-child {margin-top: 60px;}
+    article {width: 84.79%; margin: 60px auto; text-align: center;}
+    .services-area {display: inline-block; width:71.9%; margin-top: 40px;}
+    .services-area .service {width: 100%; float: none; margin: 0 0 30px 0;}
+    .services-area .service .text {margin-top: 10px;}
+
+    .check-lst .check {margin-top: 40px; width: 82.5%;}
+    .check-lst .check li {width: 100%; height: auto; margin: 0 0 7.5% 0;}
+    .img-cnt {padding-top: 250px; margin-bottom: 60px;}
+    .img-cnt .cnt .tit {font-size: 36px;}
+    .img-cnt .cnt .txt {margin-top: 30px; font-size: 18px; line-height: 28px;}
+    .img-cnt.img-l .cnt {width: 100%;}
+    .price-cnt {width: 100%; margin-left: 0;}
+    .price-cnt ul {display:inline-block; width:86.29%;}
+    .price-cnt ul li {width: 100%; margin: 0 0 4.49% 0; text-align: left;}
+    .price-cnt ul li:nth-child(2) {margin-right: 0;}
+
+    .reviews {width: 84.798%; margin-top: 40px;}
+    .reviews ul {width: 100%; margin: 0 auto;}
+    .reviews ul li {width: 100%; height: auto; margin: 0;}
+    .bg-full .inner {width: 84.79%;}
+    .bg-full .inner .text {font-size: 36px;}
+    footer .inner {width: 84.79%;}
+}
