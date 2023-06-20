@@ -1,0 +1,61 @@
+* {padding: 0; margin: 0;}
+
+.background_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.background_img img {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.background .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease-out;
+    opacity: 0.3;
+    background: #000;
+}
+
+.board {
+    position: absolute; 
+    top: 0;
+    left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 3;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #fff;
+    
+}
+
+.board .time_wrapper {
+    text-align: center;
+}
+
+.board .time_wrapper .time {
+    font-size: 500%;
+}
+
+.board .time_wrapper .date {
+    font-size: 200%;
+}
+
+.board .message {
+    font-size: 600%;
+}

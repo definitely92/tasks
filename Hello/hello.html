@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello</title>
+</head>
+<body>
+    <main>
+        <div class="background">
+            <div class="background_img">
+                <img class="img" src="./images/bg_img2.jpeg" alt="">
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="board">
+            <div class="content">
+                <div class="time_wrapper">
+                    <div class="date"></div>
+                    <div class="time"></div>
+                </div>
+                <div class="message"></div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    const imgArray = ['bg_img1.jpeg','bg_img2.jpeg','bg_img3.jpeg','bg_img4.jpeg','bg_img5.jpeg','bg_img6.jpeg','bg_img7.jpeg','bg_img8.jpeg','bg_img9.jpeg','bg_img10.jpeg'];
+    const imgWrapper = document.querySelector('.background_img');
+    const image = document.querySelector('.img');
+
+    function random () {
+        const randomPrint = imgArray[Math.floor( Math.random() * imgArray.length )];
+        image.src = `./images/${randomPrint}`;
+        console.log(`${randomPrint}`);
+    }
+    setInterval(random, 5000);
+    
+    
+    const msgArea = document.querySelector('.message');
+    const timeArea = document.querySelector('.time');
+    const dateArea = document.querySelector('.date');
+
+    function getTime(){
+        const time = new Date();
+        const hour = time.getHours();
+        const minutes = time.getMinutes();
+        const seconds = time.getSeconds();
+        const month = time.getMonth();
+        const day = time.getDay();
+        const year = time.getFullYear();
+
+        timeArea.innerHTML = `${hour<10 ? `0${hour}`:hour}:${minutes<10 ? `0${minutes}`:minutes}:${seconds<10 ? `0${seconds}`:seconds}`;
+        dateArea.innerHTML = `${year}년 ${month}월 ${day}일`;
+    }
+
+    setInterval(getTime, 1000);
+
+    const _time = new Date();
+    const _hour = _time.getHours();
+    if(_hour >= 5 && _hour <= 11) {
+        msgArea.innerText = 'Good Morning!';
+    } else if ( _hour >= 13 && _hour <= 17) {
+        msgArea.innerText = 'Good Afternoon!';
+    } else if ( _hour >= 18 && _hour <= 20) {
+        msgArea.innerText = 'Dinner time~!';
+    } else if ( _hour >= 21 && _hour <=23) {
+        msgArea.innerText = 'time to go to bed';
+    } else {
+        msgArea.innerText = 'Why didn`t you sleep yet?';
+    } 
+    
+</script>
+</html>
